@@ -132,7 +132,14 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=content))
         return 0
-
+    
+    if event.message.text == "新番":
+        content = 'https://github.com/Cabbitus/my-line-bot/edit/master/app.py'
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=content))
+        return 0
+    
 import os
 if __name__ == "__main__":
     #port = int(os.environ.get('PORT', 5000))
