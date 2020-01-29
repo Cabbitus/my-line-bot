@@ -132,6 +132,13 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=content))
         return 0
+    
+    if event.message.text == "新番":
+        content = 'https://anime1.me/2020年冬季新番'
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=content))
+        return 0
 
 import os
 if __name__ == "__main__":
